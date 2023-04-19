@@ -1,3 +1,4 @@
+![Pylint](https://github.com/Dasha6131/POCL-2.0/actions/workflows/pylint.yml/badge.svg)&nbsp;
 ---
 title: POCL
 emoji: 😻
