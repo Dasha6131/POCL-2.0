@@ -1,12 +1,13 @@
 '''Основной файл проекта'''
+import transformers
 from transformers import pipeline
-import streamlit as st
+import streamlit
 
 # import pytest
 classifier = pipeline("zero-shot-classification",
                       model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
 
-text_input = st.text_input('Введите текст')
+text_input = streamlit.text_input('Введите текст')
 
 
 def classify(text=None):
@@ -21,7 +22,7 @@ def classify(text=None):
     return output["labels"][0], output["scores"][0]
 
 
-submit = st.button('Отправить')
+submit = streamlit.button('Отправить')
 
 if submit:
-    st.write(classify())
+    streamlit.write(classify())
