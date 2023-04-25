@@ -1,5 +1,4 @@
 '''Основной файл проекта'''
-import transformers
 from transformers import pipeline
 import streamlit
 
